@@ -1,0 +1,13 @@
+@mixin transition($time: 350ms) {
+    transition: all $time ease;
+}
+ 
+@mixin card-shadow{
+    box-shadow: 0.2px 1.2px 2px 0px rgba(0, 0, 0, 0.1);
+    @include transition;
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: 1.5px 1.95px 8px 0px  rgba(0, 0, 0, 0.15);
+    }
+}

@@ -1,0 +1,51 @@
+@use  '../abstracts/media-query' as *;
+
+.about-header{
+    background-image: url('../img/about/banner.png');
+   
+    
+}
+
+.about-head{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .about-img{
+        width: 50%;
+    }
+    
+    .marquee{
+        background-color: var(--clr-basic-200);
+        width: 100%;
+    }
+}
+
+.about-app{
+    text-align: center;
+
+    video{
+        width: 70%;
+        height: 100%;
+        margin: 30px auto 0 auto;
+        border-radius: 20px;
+    }
+}
+
+@include medium-screen{
+    .about-head{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        video{
+            width: 100%;
+        }
+
+        
+        .about-img{
+            width: 100%;
+        }
+    }
+
+}

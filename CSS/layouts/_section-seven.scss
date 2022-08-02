@@ -1,0 +1,66 @@
+@use  '../abstracts/media-query' as *;
+
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url('../img/banner/b14.png');
+    background-repeat: no-repeat;
+    background-position: 20%  30%;
+    background-color: var(--clr-primary-700);
+
+    h4{
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--clr-basic-100);
+    }
+
+    p{
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--clr-basic-100);
+
+        span {
+            color: var(--clr-article-200);
+        }
+    }
+
+    .form{
+        display: flex;
+        width: 40%;
+
+        input{
+            height: 3.125rem;
+            padding: 0 1.25em;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            outline: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    
+        button{
+            background-color: var(--clr-primary-500);
+            color: var(--clr-basic-100);
+            white-space: nowrap;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+  
+}
+
+@include small-screen{
+    .newsletter .form{
+        width: 100% !important;
+    }
+}
+@include medium-screen{
+    .newsletter .form{
+        width: 70%;
+    }
+}
